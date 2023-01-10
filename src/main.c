@@ -1,21 +1,53 @@
+#include "huffman.h"
+#include "arcd.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
 
-#include "huffman.h"
+
 
 int main()
 {
-     FILE *in;
-     FILE *out1;
+     FILE *in; //開原本檔案
 
-     in = fopen("test", "rb");
-     out1 = fopen("output_huffman","wb")
+     //(1)表示huffman (2)表示arcd
+     FILE *out1; //將編碼寫入檔案
+     FILE *input1; // 將編碼檔案打開
+     FILE *decode1; // 寫入解碼檔案
+
+     FILE *out2; //將編碼寫入檔案
+     FILE *input2; // 將編碼檔案打開
+     FILE *decode2; // 寫入解碼檔案
+
+     //--------------------------------Huffman------------------------------//
+     //1.測試檔案編碼
+     in = fopen("../test/origin", "rb");
+     out1 = fopen("../test/output_huffman","wb");  
      huffman_encode_file(in, out1);
      fclose(in);
      fclose(out1);
+
+     //2.將編碼後的測試檔案解碼
+     input1=fopen("../test/output_huffman","rb");
+     decode1 = fopen("../test/decode/huffman","wb");
+     huffman_decode_file(input1, decode1);
+     fclose(input1);
+     fclose(decode1);
+          
+    //--------------------------------arcd------------------------------//
+    //1.測試檔案編碼
+     in = fopen("../test/origin", "rb");
+
+
+     //2.將編碼後的測試檔案解碼
+     out2 = fopen("../test/output_arcd","wb");
+
+     fclose(in);
+     fclose(out2);
+     
 
      return 0;
 }
