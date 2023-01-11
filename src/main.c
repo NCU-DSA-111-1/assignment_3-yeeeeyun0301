@@ -22,7 +22,6 @@ unsigned input(arcd_buf_t *const buf, void *const io)
 }
 
 
-
 typedef unsigned char symbol_t;
 static const arcd_char_t EOS = 1 << (8 * sizeof(symbol_t));
 
