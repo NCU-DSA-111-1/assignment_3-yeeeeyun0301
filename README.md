@@ -2,8 +2,8 @@
 
 ## 編譯
 
-###     gcc main.c arcd.c huffman.c adaptive_model.c file_size.c -o main
+####     <font color="gray">gcc main.c arcd.c huffman.c adaptive_model.c file_size.c -o main</font>
 
 ## 執行
 
-###     ./main
+####     <font color="gray">./main</font>
