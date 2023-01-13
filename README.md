@@ -1,22 +1,22 @@
 # Assignment3
 
-## 編譯
+## ◆ 編譯
 
 #### <font color=#008000>gcc main.c arcd.c huffman.c adaptive_model.c file_size.c -o main</font>
 
-## 執行
+## ◆ 執行
 
 #### <font color=#008000>./main</font>
 
-## 測試過程
+## ◆ 測試過程
 
 #### 將測試原始檔丟入兩種演算法中，經過壓縮和解碼，並抓取其處理時間及壓縮後檔案大小來進行兩種演算法的比較。
 
-## 測試檔內容
+## ◆ 測試檔內容
 
 #### IMLAIYIYUNIMTIREDIWANTTOSLEEPRIGHTNOW
 
-## 結果比較
+## ◆ 結果比較
 
 #### --------------------處理時間比較------------------
 
